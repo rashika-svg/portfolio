@@ -1,0 +1,15 @@
+li:hover {
+   @apply bg-zinc-800 p-4 ease-in-out scale-90 rounded-full
+}
+
+.list1 li {
+   @apply px-4 duration-500
+}
+
+.list2 li {
+   @apply px-4 duration-500
+}
+
+lucide-angular {
+   @apply hover:text-purple-400
+}

@@ -1,0 +1,26 @@
+<!-- <div #dialog class="custom-dialog" [style.width]="width" [style.height]="height">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <span class="close-button" (click)="close()">&times;</span>
+      </div>
+      <div class="dialog-body">
+        {{ data | json }}
+      </div>
+    </div>
+  </div> -->
+
+
+<!-- <div>Hello</div> -->
+
+<div class="custom-dialog-overlay" (click)="close()">
+  <div class="custom-dialog-content" (click)="stopPropagation($event)">
+    <div class="custom-dialog-header">
+      Header
+      <span class="close-button" (click)="close()">&times;</span>
+    </div>
+    <div class="custom-dialog-body">
+      content
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

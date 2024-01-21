@@ -1,0 +1,17 @@
+<div class="text-center font-thin text-4xl md:text-5xl pb-12 font-raleway">PROJECTS</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-2 px-2">
+    <div *ngFor="let links of projectLinks; let i = index"
+        class="border-[0.5px] border-zinc-600 hover:border-zinc-400 duration-300 cursor-pointer focus:scale-110 bg-cover bg-no-repeat rounded h-[21rem] md:h-[18rem] relative"
+        [ngStyle]="{'background-image': 'url(' + links.image + ')',}">
+        <div
+            class="absolute opacity-0 hover:opacity-100 hover:bg-zinc-900/80 duration-500 p-6 h-full backdrop-blur-sm rounded">
+            <div class="flex justify-between pb-3">
+                <img [src]="links.icon" alt="" class="w-8">
+                <a [href]="links.gitLink" target="_blank" class="hover:scale-110 duration-300"><lucide-angular [name]="github" 
+                        class="my-icon"></lucide-angular></a>
+            </div>
+            <p class="font-semibold hover:text-purple-300">{{links.label}}</p>
+            <p class="pt-2">{{links.description}}</p>
+        </div>
+    </div>
+</div>
