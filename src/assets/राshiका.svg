@@ -2,8 +2,8 @@
 <g filter="url(#filter0_d_130_23)">
 <rect x="4" width="166" height="57" fill="url(#pattern0)" shape-rendering="crispEdges"/>
 </g>
-<path d="M107 13C107 15.2091 105.209 17 103 17C100.791 17 99 15.2091 99 13C99 10.7909 100.791 9 103 9C105.209 9 107 10.7909 107 13Z" fill="#F368FF"/>
-<path d="M162 14.7C162 26.9234 162 33.7766 162 46" stroke="#F368FF" stroke-width="5"/>
+<path d="M107 13C107 15.2091 105.209 17 103 17C100.791 17 99 15.2091 99 13C99 10.7909 100.791 9 103 9C105.209 9 107 10.7909 107 13Z" fill="#B671FF"/>
+<path d="M162 14.7C162 26.9234 162 33.7766 162 46" stroke="#B671FF" stroke-width="5"/>
 <defs>
 <filter id="filter0_d_130_23" x="0" y="0" width="174" height="65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
