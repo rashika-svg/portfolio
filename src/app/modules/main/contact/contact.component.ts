@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Github, Linkedin, Mail } from 'lucide-angular';
+import { Github, Instagram, Linkedin, Mail } from 'lucide-angular';
 
 @Component({
   selector: 'app-contact',
@@ -10,4 +10,5 @@ export class ContactComponent {
   github = Github
   linkedin = Linkedin
   mail = Mail
+  instagram = Instagram
 }
