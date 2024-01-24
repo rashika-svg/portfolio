@@ -310,6 +310,7 @@ class ContactComponent {
     this.github = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Github;
     this.linkedin = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Linkedin;
     this.mail = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Mail;
+    this.instagram = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Instagram;
   }
   static #_ = this.ɵfac = function ContactComponent_Factory(t) {
     return new (t || ContactComponent)();
@@ -317,9 +318,9 @@ class ContactComponent {
   static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
     type: ContactComponent,
     selectors: [["app-contact"]],
-    decls: 14,
-    vars: 3,
-    consts: [[1, "grid", "lg:grid-cols-3", "gap-[5rem]"], [1, "w-full", "h-[0.5px]", "bg-white/50", "self-center"], [1, "text-center", "font-thin", "text-4xl", "md:text-5xl", "font-raleway"], [1, "flex", "justify-evenly", "items-center", "pt-[5%]"], ["href", "https://github.com/rashika-svg"], [1, "my-icon", 3, "name"], ["href", "https://www.linkedin.com/in/rashikavarshney/", 1, "hover:text-blue-600"], ["href", "mailto:youremail@example.com", 1, "hover:text-red-500"], [1, "flex", "justify-center", "mt-[10%]"], [1, "h-[0.5px]", "md:h-48", "md:w-[0.5px]", "w-[50%]", "bg-white/50"]],
+    decls: 16,
+    vars: 4,
+    consts: [[1, "grid", "lg:grid-cols-3", "gap-[5rem]"], [1, "w-full", "h-[0.5px]", "bg-white/50", "self-center"], [1, "text-center", "font-thin", "text-4xl", "md:text-5xl", "font-raleway"], [1, "flex", "justify-evenly", "items-center", "pt-[5%]"], ["href", "https://github.com/rashika-svg"], [1, "my-icon", 3, "name"], ["href", "https://www.linkedin.com/in/rashikavarshney/", 1, "hover:text-blue-600"], ["href", "mailto:youremail@example.com", 1, "hover:text-red-500"], ["href", "", 1, "hover:text-purple-500"], [1, "flex", "justify-center", "mt-[10%]"], [1, "h-[0.5px]", "md:h-48", "md:w-[0.5px]", "w-[50%]", "bg-white/50"]],
     template: function ContactComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -337,9 +338,12 @@ class ContactComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "a", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](11, "lucide-angular", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "lucide-angular", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](15, "div", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
       }
       if (rf & 2) {
@@ -349,6 +353,8 @@ class ContactComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.linkedin);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.mail);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.instagram);
       }
     },
     dependencies: [lucide_angular__WEBPACK_IMPORTED_MODULE_0__.LucideAngularComponent],
@@ -829,7 +835,7 @@ class ProjectsComponent {
     selectors: [["app-projects"]],
     decls: 4,
     vars: 1,
-    consts: [[1, "text-center", "font-thin", "text-4xl", "md:text-5xl", "pb-12", "font-raleway"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3", "flex-wrap", "gap-2", "px-2"], ["class", "border-[0.5px] border-zinc-600 hover:border-zinc-400 duration-300 cursor-pointer focus:scale-110 bg-cover bg-no-repeat rounded h-[21rem] md:h-[18rem] relative", 3, "ngStyle", 4, "ngFor", "ngForOf"], [1, "border-[0.5px]", "border-zinc-600", "hover:border-zinc-400", "duration-300", "cursor-pointer", "focus:scale-110", "bg-cover", "bg-no-repeat", "rounded", "h-[21rem]", "md:h-[18rem]", "relative", 3, "ngStyle"], [1, "absolute", "opacity-0", "hover:opacity-100", "hover:bg-zinc-900/80", "duration-500", "p-6", "h-full", "backdrop-blur-sm", "rounded"], [1, "flex", "justify-between", "pb-3"], ["alt", "", 1, "w-8", 3, "src"], ["target", "_blank", 1, "hover:scale-110", "duration-300", 3, "href"], [1, "my-icon", 3, "name"], [1, "font-semibold", "hover:text-purple-300"], [1, "pt-2"]],
+    consts: [[1, "text-center", "font-thin", "text-4xl", "md:text-5xl", "pb-12", "font-raleway"], [1, "grid", "grid-cols-1", "md:grid-cols-2", "lg:grid-cols-3", "flex-wrap", "gap-2", "px-2"], ["class", "border-[0.5px] border-zinc-600 hover:border-zinc-400 duration-300 cursor-pointer focus:scale-110 bg-cover bg-no-repeat rounded h-[21rem] md:h-[18rem] relative", 3, "ngStyle", 4, "ngFor", "ngForOf"], [1, "border-[0.5px]", "border-zinc-600", "hover:border-zinc-400", "duration-300", "cursor-pointer", "focus:scale-110", "bg-cover", "bg-no-repeat", "rounded", "h-[21rem]", "md:h-[18rem]", "relative", 3, "ngStyle"], [1, "absolute", "opacity-0", "hover:opacity-100", "hover:bg-zinc-900/80", "duration-500", "p-6", "h-full", "backdrop-blur-sm", "rounded"], [1, "flex", "justify-between", "pb-3"], ["alt", "", 1, "w-8", 3, "src"], ["target", "_blank", 1, "hover:scale-110", "duration-300", 3, "href"], [1, "my-icon", 3, "name"], [1, "font-semibold", "hover:text-purple-300"], [1, "pt-2", "text-sm", "md:text-base"]],
     template: function ProjectsComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -971,7 +977,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const environment = {
   production: false,
-  apiBaseUrl: 'https://portfolio-backend-gdwz.onrender.com/api'
+  apiBaseUrl: 'http://localhost:3000/api'
 };
 
 /***/ }),
