@@ -970,8 +970,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   environment: () => (/* binding */ environment)
 /* harmony export */ });
 const environment = {
-  production: false,
-  apiBaseUrl: 'http://localhost:3000/api'
+  production: true,
+  apiBaseUrl: 'https://portfolio-backend-gdwz.onrender.com/api'
 };
 
 /***/ }),
