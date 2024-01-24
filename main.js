@@ -310,7 +310,6 @@ class ContactComponent {
     this.github = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Github;
     this.linkedin = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Linkedin;
     this.mail = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Mail;
-    this.instagram = lucide_angular__WEBPACK_IMPORTED_MODULE_0__.Instagram;
   }
   static #_ = this.ɵfac = function ContactComponent_Factory(t) {
     return new (t || ContactComponent)();
@@ -318,9 +317,9 @@ class ContactComponent {
   static #_2 = this.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
     type: ContactComponent,
     selectors: [["app-contact"]],
-    decls: 16,
-    vars: 4,
-    consts: [[1, "grid", "lg:grid-cols-3", "gap-[5rem]"], [1, "w-full", "h-[0.5px]", "bg-white/50", "self-center"], [1, "text-center", "font-thin", "text-4xl", "md:text-5xl", "font-raleway"], [1, "flex", "justify-evenly", "items-center", "pt-[5%]"], ["href", "https://github.com/rashika-svg"], [1, "my-icon", 3, "name"], ["href", "https://www.linkedin.com/in/rashikavarshney/", 1, "hover:text-blue-600"], ["href", "mailto:youremail@example.com", 1, "hover:text-red-500"], ["href", "", 1, "hover:text-purple-500"], [1, "flex", "justify-center", "mt-[10%]"], [1, "h-[0.5px]", "md:h-48", "md:w-[0.5px]", "w-[50%]", "bg-white/50"]],
+    decls: 14,
+    vars: 3,
+    consts: [[1, "grid", "lg:grid-cols-3", "gap-[5rem]"], [1, "w-full", "h-[0.5px]", "bg-white/50", "self-center"], [1, "text-center", "font-thin", "text-4xl", "md:text-5xl", "font-raleway"], [1, "flex", "justify-evenly", "items-center", "pt-[5%]"], ["href", "https://github.com/rashika-svg"], [1, "my-icon", 3, "name"], ["href", "https://www.linkedin.com/in/rashikavarshney/", 1, "hover:text-blue-600"], ["href", "mailto:vrashika@gmail.com", 1, "hover:text-red-500"], [1, "flex", "justify-center", "mt-[10%]"], [1, "h-[0.5px]", "md:h-48", "md:w-[0.5px]", "w-[50%]", "bg-white/50"]],
     template: function ContactComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -338,12 +337,9 @@ class ContactComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "a", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](11, "lucide-angular", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "a", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "lucide-angular", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](15, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "div", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
       }
       if (rf & 2) {
@@ -353,8 +349,6 @@ class ContactComponent {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.linkedin);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.mail);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("name", ctx.instagram);
       }
     },
     dependencies: [lucide_angular__WEBPACK_IMPORTED_MODULE_0__.LucideAngularComponent],
@@ -682,7 +676,7 @@ class NavbarComponent {
     },
     decls: 38,
     vars: 5,
-    consts: [[1, "h-20", "border-b-[0.5px]", "border-white", "flex", "justify-around", "items-center", "sticky", "top-0", "bg-zinc-900", "z-50"], [1, "font-moirai-one", "text-4xl", "hover:scale-105", "duration-300", "w-28"], ["routerLink", "/", 3, "click"], ["src", "/assets/\u0930\u093Eshi\u0915\u093E.svg", "alt", ""], [1, "w-25", "hidden", "md:block", "list1"], [1, "flex", "gap-4"], ["routerLink", "/", 1, "py-4", 3, "click"], ["routerLink", "/home", "fragment", "projects", 1, "py-4"], ["routerLink", "/home", "fragment", "experience", 1, "py-4"], ["routerLink", "/home", "fragment", "skills", 1, "py-4"], ["routerLink", "/home", "fragment", "contact", 1, "py-4"], [1, "md:hidden", "absolute", "left-0", "top-[7rem]", "rounded-full", "rounded", "py-8", "list2", "border-r-[0.5px]", "border-zinc-500", "shadow-[0_35px_60px_-15px_rgba(106,90,205)]"], [1, "flex", "flex-col", "gap-8"], ["size", "18", 1, "my-icon", 3, "name"]],
+    consts: [[1, "h-20", "border-b-[0.5px]", "border-white", "flex", "justify-around", "items-center", "sticky", "top-0", "bg-zinc-900", "z-50"], [1, "font-moirai-one", "text-4xl", "hover:scale-105", "duration-300", "w-28"], ["routerLink", "/", 3, "click"], ["src", "./assets/\u0930\u093Eshi\u0915\u093E.svg", "alt", ""], [1, "w-25", "hidden", "md:block", "list1"], [1, "flex", "gap-4"], ["routerLink", "/", 1, "py-4", 3, "click"], ["routerLink", "/home", "fragment", "projects", 1, "py-4"], ["routerLink", "/home", "fragment", "experience", 1, "py-4"], ["routerLink", "/home", "fragment", "skills", 1, "py-4"], ["routerLink", "/home", "fragment", "contact", 1, "py-4"], [1, "md:hidden", "absolute", "left-0", "top-[7rem]", "rounded-full", "rounded", "py-8", "list2", "border-r-[0.5px]", "border-zinc-500", "shadow-[0_35px_60px_-15px_rgba(106,90,205)]"], [1, "flex", "flex-col", "gap-8"], ["size", "18", 1, "my-icon", 3, "name"]],
     template: function NavbarComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "a", 2);
@@ -976,8 +970,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   environment: () => (/* binding */ environment)
 /* harmony export */ });
 const environment = {
-  production: true,
-  apiBaseUrl: 'https://portfolio-backend-gdwz.onrender.com/api'
+  production: false,
+  apiBaseUrl: 'http://localhost:3000/api'
 };
 
 /***/ }),
