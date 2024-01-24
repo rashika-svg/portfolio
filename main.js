@@ -945,7 +945,7 @@ class NotFoundComponent {
     selectors: [["app-not-found"]],
     decls: 2,
     vars: 0,
-    consts: [[1, "m-auto", "invert", "md:w-[50%]"], ["src", "/assets/images/sad-figure.svg", "width", "100%", "alt", ""]],
+    consts: [[1, "m-auto", "invert", "md:w-[50%]"], ["src", "./assets/images/sad-figure.svg", "width", "100%", "alt", ""]],
     template: function NotFoundComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -970,7 +970,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   environment: () => (/* binding */ environment)
 /* harmony export */ });
 const environment = {
-  production: true,
+  production: false,
   apiBaseUrl: 'https://portfolio-backend-gdwz.onrender.com/api'
 };
 
