@@ -976,7 +976,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   environment: () => (/* binding */ environment)
 /* harmony export */ });
 const environment = {
-  production: false,
+  production: true,
   apiBaseUrl: 'https://portfolio-backend-gdwz.onrender.com/api'
 };
 
