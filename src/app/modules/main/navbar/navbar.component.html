@@ -9,6 +9,7 @@
             <li><a class="py-4" routerLink="/home" fragment="experience">Experience</a></li>
             <li><a class="py-4" routerLink="/home" fragment="skills">Skills</a></li>
             <li><a class="py-4" routerLink="/home" fragment="contact">Contact</a></li>
+            <li><a class="py-4 hover:cursor-pointer" (click)="downloadResume()">Resume</a></li>
         </ul>
     </div>
     <div
@@ -23,6 +24,8 @@
             <li><a class="py-4" routerLink="/home" fragment="skills"><lucide-angular [name]="skills" size="18"
                         class="my-icon"></lucide-angular></a></li>
             <li><a class="py-4" routerLink="/home" fragment="contact"><lucide-angular [name]="contact" size="18"
+                        class="my-icon"></lucide-angular></a></li>
+            <li><a class="py-4"><lucide-angular [name]="download" size="18" (click)="downloadResume()"
                         class="my-icon"></lucide-angular></a></li>
         </ul>
     </div>
