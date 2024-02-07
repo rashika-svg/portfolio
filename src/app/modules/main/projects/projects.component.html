@@ -1,5 +1,5 @@
 <div class="text-center font-thin text-4xl md:text-5xl pb-12 font-raleway">PROJECTS</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-2 px-2">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 px-2">
     <div *ngFor="let links of projectLinks; let i = index"
         class="border-[0.5px] border-zinc-600 hover:border-zinc-400 duration-300 cursor-pointer focus:scale-110 bg-cover bg-no-repeat rounded h-[21rem] md:h-[18rem] relative"
         [ngStyle]="{'background-image': 'url(' + links.image + ')',}">
