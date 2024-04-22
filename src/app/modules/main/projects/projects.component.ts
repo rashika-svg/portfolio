@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectsService } from 'src/app/core/service/projects.service';
 import { IProject } from 'src/app/core/models/project.model';
 import { Github } from 'lucide-angular';
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-projects',
@@ -11,32 +12,22 @@ import { Github } from 'lucide-angular';
 export class ProjectsComponent implements OnInit {
 
   projectLinks: IProject[] = [];
+  items$!: Observable<any[]>;
   github = Github
 
   constructor(
-    private _projectService: ProjectsService,
-  ) {
-  }
+    private _store: AngularFirestore
+  ) { }
 
   ngOnInit(): void {
     this.getProjects();
-    // this.getProjectById();
   }
 
-  getProjects(queryParams: any = {}) {
-    this._projectService.getProjects({}).subscribe({
-      next: (res: any) => {
-        this.projectLinks = res;
-      }
-    })
-  }
-
-  getProjectById(id: string) {
-    this._projectService.getProjectById(id).subscribe({
-      next: (res: any) => {
-        console.log(res);
-      }
-    })
+  getProjects() {
+    this.items$ = this._store.collection('projects').valueChanges();
+    this.items$.subscribe(items => {
+      this.projectLinks = items;
+    });
   }
 }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 import { IExperience } from 'src/app/core/models/experience.model';
-import { ExperienceService } from 'src/app/core/service/experience.service';
 
 @Component({
   selector: 'app-experience',
@@ -10,21 +11,20 @@ import { ExperienceService } from 'src/app/core/service/experience.service';
 export class ExperienceComponent implements OnInit {
 
   experience: IExperience[] = [];
+  items$!: Observable<any[]>;
 
   constructor(
-    private _expService: ExperienceService
-  ) {
-  }
+    private _store: AngularFirestore
+  ) {}
 
   ngOnInit(): void {
     this.getExperience();
   }
-
-  getExperience(_queryParams: any = {}) {
-    this._expService.getExperiences({}).subscribe({
-      next: (res: any) => {
-        this.experience = res;
-      }
-    })
+  
+  getExperience() {
+  this.items$ = this._store.collection('experience').valueChanges();
+  this.items$.subscribe(items => {
+    this.experience = items;
+    });
   }
 }
