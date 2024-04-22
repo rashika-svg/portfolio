@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 import { ISkill } from 'src/app/core/models/skills.model';
-import { SkillsService } from 'src/app/core/service/skills.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,20 +11,20 @@ import { SkillsService } from 'src/app/core/service/skills.service';
 export class SkillsComponent {
 
   skill: ISkill[] = [];
+  items$!: Observable<any[]>;
 
   constructor(
-    private _skillService: SkillsService
+    private _store: AngularFirestore
   ) {}
 
   ngOnInit(): void {
     this.getSkills();
   }
-
-  getSkills(_queryParams: any = {}) {
-    this._skillService.getSkills({}).subscribe({
-      next: (res: any) => {
-        this.skill = res.reverse();
-      }
-    })
+  
+  getSkills() {
+  this.items$ = this._store.collection('skills').valueChanges();
+  this.items$.subscribe(items => {
+    this.skill = items;
+    });
   }
 }

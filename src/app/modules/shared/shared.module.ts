@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { GlowEffectDirective } from 'src/app/core/directives/glow-effect.directive';
+import { ScrollHideDirective } from 'src/app/core/directives/appScrollHide';
 
 export const SHARED_DIRECTIVE = [
-  GlowEffectDirective
+  GlowEffectDirective,
+  ScrollHideDirective
 ]
 
 export const SHARED_COMPONENTS = [
