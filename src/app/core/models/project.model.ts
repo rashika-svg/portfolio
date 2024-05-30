@@ -6,4 +6,5 @@ export interface IProject {
     description: string;
     image: string;
     gitLink: string;
+    href: string;
 }

@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&display=swap');
 
 * {
     margin: 0;
@@ -15,5 +16,5 @@
 }
 
 body {
-     @apply bg-zinc-900 text-white font-raleway
+     @apply bg-zinc-900 text-white font-inconsolata
 }

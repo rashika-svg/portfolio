@@ -10,6 +10,7 @@ module.exports = {
         'lavishly': ['Lavishly Yours', 'cursive'],
         'poppins': ['Poppins', 'sans-serif'],
         'moirai-one': ['Moirai One', 'sans-serif'],
+        'inconsolata':['Inconsolata', 'monospace'],
       },
     },
   },
