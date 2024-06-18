@@ -1,9 +1,9 @@
 li:hover {
-   @apply bg-zinc-800 rounded-full -translate-x-1
+   @apply bg-zinc-800 rounded-full p-4
 }
 
 .list1 li {
-   @apply p-4 duration-500 uppercase
+   @apply p-4 duration-500 uppercase cursor-pointer active:text-purple-400 
 }
 
 .list2 li {

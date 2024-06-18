@@ -1,10 +1,12 @@
 <div class="text-center text-4xl md:text-5xl pb-12">PROJECTS</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 px-2">
-    <a *ngFor="let links of projectLinks; let i = index" [href]="links.href" target="_blank"
-        class="border-[0.5px] border-zinc-600 hover:border-zinc-400 duration-300 cursor-pointer hover:-translate-y-2 bg-cover bg-no-repeat rounded h-[20rem] relative"
+
+<div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 px-2">
+    <a *ngFor="let links of projectLinks; let i = index" [href]="links.href" target="_blank" class="border-[0.5px]
+     border-zinc-600 hover:border-zinc-400 duration-300 cursor-pointer 
+        hover:-translate-y-2 bg-cover h-[25rem] md:h-80 rounded relative text-ellipsis overflow-hidden"
         [ngStyle]="{'background-image': 'url(' + links.image + ')',}">
         <div
-            class="absolute opacity-100 md:opacity-0 hover:opacity-100 hover:bg-zinc-900/80 duration-500 p-6 h-full backdrop-blur-sm rounded">
+            class="absolute  md:opacity-0 hover:opacity-100 bg-zinc-900/80 hover:bg-zinc-900/80 duration-500 h-full p-6 backdrop-blur-sm rounded">
             <div class="flex justify-end">
                 <a [href]="links.gitLink" target="_blank" class="hover:scale-110 duration-300"><lucide-angular
                         [name]="github" class="my-icon"></lucide-angular></a>
@@ -13,7 +15,7 @@
                 <img [src]="links.icon" alt="" class="w-8">
                 <p class="font-semibold hover:text-purple-300 text-lg">{{links.label}}</p>
             </div>
-            <p class="pt-2 text-base lg:text-base hover:translate-x-2 duration-500">{{links.description}}</p>
+            <p class="pt-2 hover:translate-x-2 duration-500">{{links.description}}</p>
         </div>
     </a>
 </div>

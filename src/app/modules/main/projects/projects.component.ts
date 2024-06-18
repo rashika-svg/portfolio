@@ -15,6 +15,7 @@ export class ProjectsComponent implements OnInit {
   items$!: Observable<any[]>;
   github = Github
 
+
   constructor(
     private _store: AngularFirestore
   ) { }
