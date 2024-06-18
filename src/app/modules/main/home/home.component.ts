@@ -16,8 +16,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     const typed = new Typed('#element', {
-      strings: ['Frontend Developer.'],
+      strings: ['Frontend Developer.', 'Web Designer.'],
       typeSpeed: 100,
+       loop: true,
+      showCursor: true,
+      cursorChar: '/>',
     });
 
     this._route.fragment.subscribe(fragment => {
