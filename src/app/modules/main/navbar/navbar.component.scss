@@ -1,13 +1,17 @@
-li:hover {
-   @apply bg-zinc-800 rounded-full p-4
+.list1 a {
+   @apply p-4 duration-500 uppercase cursor-pointer active:text-purple-400 focus:text-purple-400 relative overflow-hidden rounded-full text-white/70 hover:text-white
 }
 
-.list1 li {
-   @apply p-4 duration-500 uppercase cursor-pointer active:text-purple-400 
+.list1 a::before {
+   @apply content-[''] absolute bg-zinc-800 ease-in-out duration-700 origin-left -left-[100%] w-full h-full top-0 -z-10 rounded-full
+}
+
+.list1 a:hover::before {
+   @apply left-0
 }
 
 .list2 li {
-   @apply px-4 duration-500
+   @apply px-4 duration-500 hover:bg-zinc-800 hover:p-4 rounded-full
 }
 
 lucide-angular {

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DownloadService {
-  private resumeUrl = '../../../assets/Rashika_Resume.pdf';
+  private resumeUrl = '/assets/Rashika_Resume.pdf';
 
   constructor(
     private httpClient: HttpClient
