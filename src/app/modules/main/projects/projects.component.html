@@ -1,21 +1,50 @@
 <div class="text-center text-4xl md:text-5xl pb-12">PROJECTS</div>
 
 <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 px-2">
-    <a *ngFor="let links of projectLinks; let i = index" [href]="links.href" target="_blank" class="border-[0.5px]
-     border-zinc-600 hover:border-zinc-400 duration-300 cursor-pointer 
-        hover:-translate-y-2 bg-cover h-[25rem] md:h-80 rounded relative text-ellipsis overflow-hidden"
-        [ngStyle]="{'background-image': 'url(' + links.image + ')',}">
+    <div *ngFor="let links of projectLinks; let i = index" class="border-[0.5px] border-zinc-600 hover:border-zinc-400 duration-300 
+              hover:-translate-y-2 bg-cover bg-center h-[16rem] rounded relative text-ellipsis overflow-hidden"
+        [ngStyle]="{'background-image': 'url(' + links.image[0] + ')'}">
         <div
-            class="absolute  md:opacity-0 hover:opacity-100 bg-zinc-900/80 hover:bg-zinc-900/80 duration-500 h-full p-6 backdrop-blur-sm rounded">
-            <div class="flex justify-end">
-                <a [href]="links.gitLink" target="_blank" class="hover:scale-110 duration-300"><lucide-angular
-                        [name]="github" class="my-icon"></lucide-angular></a>
+            class="absolute md:opacity-0 hover:opacity-100 bg-zinc-900/80 hover:bg-zinc-900/80 duration-500 h-full p-6 backdrop-blur-sm rounded">
+            <div class="grid content-between h-full">
+                <a [href]="links.href" target="_blank">
+                    <div class="flex justify-end">
+                        <a [href]="links.gitLink" target="_blank" class="hover:scale-110 duration-300">
+                            <lucide-angular [name]="github" class="my-icon"></lucide-angular>
+                        </a>
+                    </div>
+                    <div class="flex gap-2 items-center py-3">
+                        <img [src]="links.icon" alt="" class="w-8">
+                        <p class="font-semibold hover:text-purple-300 text-lg">{{links.label}}</p>
+                    </div>
+                    <p class="pt-2 hover:translate-x-2 duration-500">{{links.description.slice(0,100)}}...</p>
+                </a>
+                <div>
+                    <button (click)="showContent(i);" class="bg-black/50 p-3 w-full rounded-lg mt-2 z-20">View
+                        images</button>
+                </div>
             </div>
-            <div class="flex gap-2 items-center py-3">
-                <img [src]="links.icon" alt="" class="w-8">
-                <p class="font-semibold hover:text-purple-300 text-lg">{{links.label}}</p>
-            </div>
-            <p class="pt-2 hover:translate-x-2 duration-500">{{links.description}}</p>
         </div>
-    </a>
+    </div>
+</div>
+
+<!-- Carousel Dialog (Visible on Hover) -->
+<div *ngIf="hoveredIndex !== null"
+    class="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 bg-black/80 px-24">
+    <div class="rounded-lg" (mouseleave)="hideContent()">
+        <div class="mb-16">
+            <span class="flex gap-2">
+                <img [src]="projectLinks[hoveredIndex].icon" alt="" class="w-10">
+                <p class="text-2xl font-semibold text-white mt-2">{{projectLinks[hoveredIndex].label}}</p>
+            </span>
+            <p class="text-lg text-white">{{projectLinks[hoveredIndex].description}}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div class="aspect-video" *ngFor="let img of projectLinks[hoveredIndex].image; let i = index">
+                <img [src]="img" alt="Image"
+                    class="rounded-lg border border-gray-200 max-h-full max-w-full hover:scale-150 duration-300 shadow-2xl"
+                    [ngClass]="{'md:origin-left' : i === 0, 'md:origin-right': i === 2}">
+            </div>
+        </div>
+    </div>
 </div>

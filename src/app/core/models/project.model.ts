@@ -4,7 +4,7 @@ export interface IProject {
     icon: string;
     label: string;
     description: string;
-    image: string;
+    image: string[];
     gitLink: string;
     href: string;
 }
