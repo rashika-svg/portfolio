@@ -5,13 +5,24 @@
     </div>
     <div class="w-25 hidden md:block list1">
         <ul class="flex gap-4 items-center">
-            <li><a routerLink="/" (click)="scrollToTop()">Home</a></li>
-            <li><a routerLink="/home" fragment="projects">Projects</a></li>
-            <li><a routerLink="/home" fragment="experience">Experience</a></li>
-            <li><a routerLink="/home" fragment="skills">Skills</a></li>
-            <li><a routerLink="/home" fragment="contact">Contact</a></li>
-            <li class="hover:cursor-pointer"><a (click)="downloadResume()"><lucide-angular [name]="download" size="18"
-                        (click)="downloadResume()" class="my-icon"></lucide-angular></a></li>
+            <a routerLink="/" (click)="scrollToTop()">
+                <li>Home</li>
+            </a>
+            <a routerLink="/home" fragment="projects">
+                <li>Projects</li>
+            </a>
+            <a routerLink="/home" fragment="experience">
+                <li>Experience</li>
+            </a>
+            <a routerLink="/home" fragment="skills">
+                <li>Skills</li>
+            </a>
+            <a routerLink="/home" fragment="contact">
+                <li>Contact</li>
+            </a>
+            <a class="hover:cursor-pointer" (click)="downloadResume()">
+                <lucide-angular [name]="download" size="18" class="my-icon"></lucide-angular>
+            </a>
         </ul>
     </div>
     <div
