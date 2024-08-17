@@ -1,45 +1,36 @@
-<div class="h-20 border-b-[0.5px] border-white flex justify-around items-center sticky top-0 bg-zinc-900 z-50"
-    appScrollHide>
+<div class="h-20 border-b-[0.5px] border-white flex justify-around items-center sticky top-0 bg-zinc-900 z-50">
     <div class="font-moirai-one text-4xl hover:scale-105 duration-300 w-28">
         <a routerLink="/" (click)="scrollToTop()"><img src="./assets/राshiका.svg" alt=""></a>
     </div>
     <div class="w-25 hidden md:block list1">
         <ul class="flex gap-4 items-center">
-            <a routerLink="/" (click)="scrollToTop()">
-                <li>Home</li>
-            </a>
-            <a routerLink="/home" fragment="projects">
-                <li>Projects</li>
-            </a>
-            <a routerLink="/home" fragment="experience">
-                <li>Experience</li>
-            </a>
-            <a routerLink="/home" fragment="skills">
-                <li>Skills</li>
-            </a>
-            <a routerLink="/home" fragment="contact">
-                <li>Contact</li>
-            </a>
-            <a class="hover:cursor-pointer" (click)="downloadResume()">
-                <lucide-angular [name]="download" size="18" class="my-icon"></lucide-angular>
-            </a>
+            <ng-container *ngFor="let nav of navList">
+                <a [routerLink]="['/home']" [fragment]="nav.fragment" (click)="scrollToSection(nav.fragment)">
+                    <li [ngClass]="{'text-purple-400': (currentData$ | async) === nav.fragment}" class="navItem">
+                        {{nav.route}}</li>
+                </a>
+            </ng-container>
+            <ng-container>
+                <a class="hover:cursor-pointer" (click)="downloadResume()">
+                    <lucide-angular [name]="download" size="18" class="my-icon"></lucide-angular>
+                </a>
+            </ng-container>
         </ul>
     </div>
     <div
         class="md:hidden absolute left-0 top-[7rem] rounded-full py-8 list2 border-r-[0.5px] border-zinc-500 shadow-[0_35px_60px_-15px_rgba(106,90,205)]">
         <ul class="flex flex-col gap-8">
-            <li><a class="py-4" routerLink="/" (click)="scrollToTop()"><lucide-angular [name]="home" size="18"
-                        class="my-icon"></lucide-angular></a></li>
-            <li><a class="py-4" routerLink="/home" fragment="projects"><lucide-angular [name]="projects" size="18"
-                        class="my-icon"></lucide-angular></a></li>
-            <li><a class="py-4" routerLink="/home" fragment="experience"><lucide-angular [name]="experience" size="18"
-                        class="my-icon"></lucide-angular></a></li>
-            <li><a class="py-4" routerLink="/home" fragment="skills"><lucide-angular [name]="skills" size="18"
-                        class="my-icon"></lucide-angular></a></li>
-            <li><a class="py-4" routerLink="/home" fragment="contact"><lucide-angular [name]="contact" size="18"
-                        class="my-icon"></lucide-angular></a></li>
-            <li><a class="py-4"><lucide-angular [name]="download" size="18" (click)="downloadResume()"
-                        class="my-icon"></lucide-angular></a></li>
+            <ng-container *ngFor="let nav of navList">
+                <a [routerLink]="['/home']" [fragment]="nav.fragment"
+                    [ngClass]="(currentData$ | async) == nav.fragment ? 'text-purple-400 p-4 bg-zinc-800': 'text-white bg-none'">
+                    <lucide-angular [name]="nav.iconName" size="18" class="my-icon"></lucide-angular>
+                </a>
+            </ng-container>
+            <ng-container>
+                <a class="hover:cursor-pointer" (click)="downloadResume()">
+                    <lucide-angular [name]="download" size="18" class="my-icon"></lucide-angular>
+                </a>
+            </ng-container>
         </ul>
     </div>
 </div>
