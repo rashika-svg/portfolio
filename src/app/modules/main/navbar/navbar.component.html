@@ -1,4 +1,4 @@
-<div class="h-20 border-b-[0.5px] border-white flex justify-around items-center sticky top-0 bg-zinc-900 z-50">
+<div class="h-20 border-b-[0.5px] border-zinc-600 flex justify-around items-center sticky top-0 bg-zinc-900 z-50">
     <div class="font-moirai-one text-4xl hover:scale-105 duration-300 w-28">
         <a routerLink="/" (click)="scrollToTop()"><img src="./assets/राshiका.svg" alt=""></a>
     </div>
@@ -18,7 +18,7 @@
         </ul>
     </div>
     <div
-        class="md:hidden absolute left-0 top-[7rem] rounded-full py-8 list2 border-r-[0.5px] border-zinc-500 shadow-[0_35px_60px_-15px_rgba(106,90,205)]">
+        class="md:hidden absolute left-0 top-[7rem] rounded-full py-8 list2 border-r-[0.5px] border-zinc-600 shadow-[0_35px_60px_-15px_rgba(106,90,205)]">
         <ul class="flex flex-col gap-8">
             <ng-container *ngFor="let nav of navList">
                 <a [routerLink]="['/home']" [fragment]="nav.fragment"
